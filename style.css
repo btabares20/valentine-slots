@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5efe6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.machine {
+  position: relative;
+  background: #fffaf3;
+  padding: 70px 40px 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  text-align: center;
+  width: 520px;
+}
+
+.title-card {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4d6d;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.reels {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.reel {
+  background: #fff0f3;
+  border: 3px solid #ff4d6d;
+  border-radius: 12px;
+  width: 150px;
+  height: 100px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  text-align: center;
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.reel.spinning {
+  animation: reelShake 0.08s infinite alternate;
+}
+@keyframes reelShake { 0% {transform:translateY(0);} 100% {transform:translateY(-3px);} }
+
+.reel.settle {
+  animation: settle 0.12s ease-out;
+}
+@keyframes settle { 0% {transform:translateY(-4px);} 50% {transform:translateY(2px);} 100% {transform:translateY(0);} }
+
+button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.modal-overlay {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.modal h2 {
+  color: #ff4d6d;
+  margin-bottom: 15px;
+}
+
+.modal p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.heart {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: floatUp 2s ease-out forwards;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity:1; }
+  100% { transform: translateY(-100px) scale(1.3); opacity:0; }
+}
+.history-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.history-panel {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100%;
+  background: #fffaf3;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 101;
+}
+
+.history-panel.active {
+  right: 0;
+}
+
+.history-panel h3 {
+  color: #ff4d6d;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.history-item {
+  background: #fff0f3;
+  border-left: 4px solid #ff4d6d;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.floating-bubble {
+  position: absolute;
+  background: #ffccd9;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: floatBubble 3s ease-out forwards;
+}
+
+@keyframes floatBubble {
+  0% { transform: translateY(0) scale(1); opacity: 0.9; }
+  100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
+}
