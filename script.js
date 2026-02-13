@@ -9,10 +9,11 @@ const reasons = [
   { sentence: "Your voice soothes me no matter what is happening.", explanation: "Kung ikaw napapatulog ko sa boses ko, ako diiiin" },
   { sentence: "You are my partner in crime and my greatest ally.", explanation: "Yung pakiramdam na parang walang makakapigil saten" },
   { sentence: "Your courage inspires me to be better.", explanation: "Idol kita e, isa ka sa mga pinakamatapang at malakas na taong kilala ko" },
-  { sentence: "You make me laugh like no one else can.", explanation: "Your humor fills my life with joy and light." },
+  { sentence: "You make me laugh like no one else can.", explanation: "Funny ka kasiiii sobra! HAHAHAHAHHAHA I miss you" },
   { sentence: "Your love makes everything better.", explanation: "I wanted to live longer because of you hehe, cheesyyyyy" },
   { sentence: "I love the way you believe in me even when I doubt myself.", explanation: "You believe in me, big deal saken yon!" },
-  { sentence: "You are sweet in your own way!", explanation: "You have your own way sa pagiging sweet, at kinikilig ako don kasi feeling ko ang special ko" }
+  { sentence: "You are sweet in your own way!", explanation: "You have your own way sa pagiging sweet, at kinikilig ako don kasi feeling ko ang special ko" },
+  { sentence: "I just love you so much!", explanation: "Your existence, your flaws, your everything. Namiss tuloy kita habang tinatype to :(" }
 ];
 
 let lastSpins = [];
